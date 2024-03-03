@@ -1,0 +1,26 @@
+
+<table class = "table table-striped">
+    <tr>
+        <th>ID</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Email Id</th>
+    <th>Actions</th>
+</tr>
+<tr *ngFor = "let employee of Employees">
+    <th>{{employee.longId}}</th>
+    <th>{{employee.firstName}}</th>
+    <th>{{employee.lastName}}</th>
+    <th>{{employee.emailId}}</th>
+    <th>
+        <button class = "btn-btn-submit" (click) = "getEmployeeMethod(employee.longId)" type = "submit" >Update Employee</button>
+    </th>
+    <th>
+        <button class = "btn-btn-submit" (click) = "deleteEmployee(employee.longId)" type = "submit" >Delete Employee</button>
+    </th>
+
+    <th>
+        <button class = "btn-btn-submit" (click) = "view(employee.longId)" type = "submit" >View</button>
+    </th>
+</tr>
+</table>
