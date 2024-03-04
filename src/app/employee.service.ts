@@ -1,8 +1,9 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, map } from 'rxjs';
 import { Employee } from './employee';
 import { HttpResponse } from '@angular/common/http';
+import { User } from './user';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class EmployeeService {
   }
   private baseURL = "http://localhost:8080/api/v1";
  employee = new BehaviorSubject<any>(null);
-
+ 
   constructor(private httpClient:HttpClient) {
 
 
@@ -59,7 +60,6 @@ export class EmployeeService {
         deleteEmployee(id: number): Observable<any>{
           return this.httpClient.delete(`${this.baseURL}/deleteEmployee/${id}`)
         }
-        
-       }
-   
+       
+      }  
 
