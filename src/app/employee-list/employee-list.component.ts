@@ -39,7 +39,7 @@ private getEmployeeList()
   console.log("Get Employee method "+this.employee.firstName);
   
   console.log("Get Employee "+ JSON.stringify(this.employee));
-  this.router.navigate(['updateEmployee',id]);
+  this.router.navigate(['home/updateEmployee',id]);
 }
 
 deleteEmployee(id: number)
@@ -48,14 +48,14 @@ deleteEmployee(id: number)
     this.employee =res;
   this.getEmployeeList();
   });
-  this.router.navigate([`/employees`]);
+  this.router.navigate([`home/employees`]);
 
 }
 view(id: number)
 {
   this.employeeService.getEmployeemethod(id).subscribe(res =>
     {
-      this.router.navigate(['view',id]);
+      this.router.navigate(['home/view',id]);
     })
 }
 }

@@ -6,14 +6,17 @@ import { ErrorComponent } from './error/error.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { LoginComponent } from './login/login.component';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {path: 'employees', component: EmployeeListComponent},
-  {path: 'add-employee', component: AddEmployeeComponent},  
+  {path: 'home/employees', component: EmployeeListComponent},
+  {path: 'home/add-employee', component: AddEmployeeComponent},  
   {path: 'error', component: ErrorComponent}, 
   {path: 'login',component: LoginComponent},
-  {path: 'updateEmployee/:id', component: UpdateEmployeeComponent},
-  {path: 'view/:id', component: EmployeeDetailsComponent},
+  {path: 'home/updateEmployee/:id', component: UpdateEmployeeComponent},
+  {path: 'home/view/:id', component: EmployeeDetailsComponent},
+  {path: 'home', component: HomeComponent},
    {path: '', redirectTo:'login', pathMatch: 'full'},
 ];
 

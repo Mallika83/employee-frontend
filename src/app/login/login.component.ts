@@ -22,7 +22,7 @@ export class LoginComponent {
       } else {
           this.authenticated = false;
       }
-        this.router.navigate([`employees`]);
+        this.router.navigate([`home`]);
       })
   }
 }

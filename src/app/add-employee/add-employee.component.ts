@@ -23,7 +23,7 @@ console.log("Last name "+updatedEmployee.lastName);
 console.log("Email ID "+updatedEmployee.emailId);
   this.employeeService.addEmployee(updatedEmployee).subscribe((data) =>
   {this.employee = data;
-  this.router.navigate([`/employees`])},
+  this.router.navigate([`home/employees`])},
   error =>
   {
     this.error = error.body;

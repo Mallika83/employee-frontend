@@ -45,7 +45,7 @@ updateEmployee(id: number,employee: Employee)
   
   this.employeeService.updateEmployee(id,employee).subscribe(
     (res) => {this.employee = res;
-    this.router.navigate([`/employees`])
+    this.router.navigate([`home/employees`])
   });
     
   

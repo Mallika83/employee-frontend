@@ -14,6 +14,7 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 import { LoginComponent } from './login/login.component';
 import { LoginInterceptor } from './login.interceptor';
 import { AuthenticationService } from './authentication.service';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AuthenticationService } from './authentication.service';
     ErrorComponent,
     UpdateEmployeeComponent,
     EmployeeDetailsComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
